@@ -1,0 +1,475 @@
+// Components
+
+@media only screen and ($tablet) {
+  .wrap-title {
+    &--prime {
+      .title {
+        @include font-lh(42, 1.2);
+      }
+    }
+
+    &--second {
+      max-width: 650px;
+    }
+  }
+}
+
+@media only screen and ($phone-sm) {
+  .wrap-title {
+    &--prime {
+      margin-bottom: 32px;
+
+      .title {
+        @include font-lh(36, 1.2);
+      }
+    }
+
+  }
+}
+
+//  ********* Page section  *********
+
+
+.site-main {
+
+  @media only screen and ($desktop-lg) {
+    .hero-block {
+      height: 100vh;
+      max-height: 592px;
+      &__img img {
+        width: 580px;
+      }
+    }
+  }
+
+  @media only screen and ($laptop) {
+    .hero-block {
+      overflow: visible;
+      &__content {
+        max-width: 520px;
+      }
+
+      &__img {
+        max-width: 455px;
+        margin-right: -20px;
+
+      }
+    }
+
+    .hero-block-blog__img {
+      margin-right: -20px;
+    }
+    .posts-page {
+      &__inner {
+        align-items: center;
+
+      }
+      #secondary.widget-area {
+        max-width: 768px;
+        width: 100%;
+      }
+      &.post-list {
+        .posts-page__inner {
+          flex-direction: column-reverse;
+        }
+        nav .nav-links{
+          justify-content: center;
+        }
+        #secondary.widget-area {
+          margin-bottom: 120px;
+        }
+      }
+      &.post-single {
+        .posts-page__inner {
+          flex-direction: column;
+        }
+        .sidebar-banner {
+          display: block;
+        }
+        #secondary.widget-area section:last-child {
+          display: none;
+        }
+      }
+
+      .comments-area {
+        margin-bottom: 120px;
+      }
+  
+      .form-submit {
+        text-align: left;
+      }
+    }
+    .contact-page__img {
+      margin-left: 62px;
+    }
+
+    .erorr-page {
+      .wrapper {
+        max-width: 430px;
+        width: 100%;
+      }
+    }
+
+  }
+
+
+  @media only screen and ($tablet) {
+    .hero-block {
+      .wrapper--widget .rating-site {
+        &__text span {
+          display: none;
+        }
+      }
+    }
+    .contact-page {
+      &__inner {
+        justify-content: end;
+        margin-left: -20px;
+      }
+
+      &__img {
+        margin-left: 0;
+        margin-right: 40px;
+      }
+    }
+    .erorr-page {
+      &__img {
+        margin-right: 0;
+        margin-left: -20px;
+      }
+      .wrapper {
+        max-width: 340px;
+      }
+    }
+  }
+  @media only screen and ($tablet-sm) {
+    .review-slider {
+      padding: 0 20px;
+    }
+
+    .nav-review-slider,
+    .nav-slider__btn {
+      display: none;
+    }
+
+    .comment-form-comment textarea {
+      max-width: 509px;
+    }
+    .comment-form-author,
+    .comment-form-email {
+      max-width: 280px;
+    }
+  }
+
+  @media only screen and ($tablet-sm) and (min-width: 680px) {
+    .hero-block {
+      &__content {
+        max-width: 376px;
+
+        .wrapper {
+          flex-direction: column;
+          align-items: start;
+
+          .btn {
+            margin-right: 0;
+            margin-bottom: 32px;
+          }
+        }
+      }
+    }
+  }
+
+  @media only screen and ($phone-xl) {
+    .hero-block {
+      &__img {
+        max-width: 285px;
+      }
+      .wrapper--widget .rating-site {
+        &__grade {
+          margin-right: 0;
+        }
+
+        &__text {
+          display: none;
+        }
+      }
+    }
+    
+    .hero-block-blog {
+      &__inner {
+        flex-direction: column;
+      }
+
+      &__img {
+        margin-right: 0;
+        margin-top: 48px;
+        min-width: auto;
+        width: 100%;
+        max-width: 466px;
+        img {
+          width: 100%;
+        }
+      }
+    }
+    .contact-page__inner {
+      padding-right: 0;
+    }
+  }
+
+  @media only screen and ($phone-lg) {
+    .hero-block {
+      height: auto;
+      max-height: none;
+
+      &__inner {
+        flex-direction: column;
+
+       
+      }
+
+      &__content .wrapper {
+        align-items: center;
+
+        .btn {
+          margin-right: 24px;
+        }
+      }
+
+      &__img {
+        margin-top: 24px;
+        max-width: 450px;
+
+        img {
+          width: 100%;
+        }
+      }
+
+      .wrapper--widget {
+        border: 0;
+        padding: 0;
+
+        .rating-site {
+          flex-direction: column-reverse;
+          &__img {
+            width: 84px;
+            height: 21px;
+
+            span {
+              display: none;
+            }
+            img {
+              height: 100%;
+            }
+          }
+
+          &__grade {
+            @include font-lh(28, 1.4);
+            margin: 0;
+    
+            &::after {
+              width: 30px;
+              height: 30px;
+    
+            }
+          }
+        }
+      }
+
+    
+    }
+
+
+    .erorr-page {
+      &__inner {
+        flex-direction: column;
+        margin-top: 48px;
+      }
+      &__img {
+        margin: 0 0 48px;
+
+        img {
+          width: 100%;
+        }
+      }
+      .wrapper {
+        text-align: center;
+
+        .wrap-title {
+          text-align: inherit;
+          align-items: center;
+        }
+      }
+    }
+  }
+
+  @media only screen and ($phone-md) {
+    .verified-mark {
+      padding-left: 20px !important;
+
+      &::before {
+        visibility: hidden;
+        opacity: 0;
+        white-space: nowrap;
+        padding: 12px 18px;
+        background-color: white;
+        border: 1px solid $color__border;
+        border-radius: 12px;
+        box-shadow: 0px 0px 10px 0px $color_form_shadow;
+        transition: $transition;
+
+        position: absolute;
+        right: 0;
+        bottom: calc(100% + 5px);
+
+        z-index: 1;
+      }
+
+      &:focus::before,
+      &:active::before {
+        visibility: visible;
+        opacity: 1;
+      }
+    }
+
+    .faq-block__content .ac-container {
+      .accordeon-title {
+        @include font-lh(16, 1.1875);
+
+      }
+      .accordeon-content {
+        @include font-lh(14, 1.5);
+      }
+    }
+
+    .contact-page {
+      &__inner {
+        margin-left: 0;
+        justify-content: center;
+        padding: 0 0 24px;
+      }
+
+      &__img {
+        display: none;
+      }
+
+      .info-contact {
+        margin-top: 0;
+      }
+    }
+
+  }
+
+  @media only screen and ($phone-sm) {
+    .hero-block {
+      &__img {
+        max-width: none;
+        width: 100%;
+        margin-right: 0;
+      }
+
+      .rating-site {
+        .rating-site__grade {
+          @include font-lh(28, 1.4);
+          margin-left: 0;
+
+          span {
+            width: 30px;
+            height: 30px;
+
+          }
+        }
+
+        .rating-site__img {
+          width: 84px;
+          height: 21px;
+
+          span {
+            display: none;
+          }
+
+          img {
+            height: auto;
+          }
+        }
+      }
+    }
+    .review-slider {
+      padding: 0 10px;
+    }
+
+    .nav-slider {
+      margin-top: 48px;
+    }
+    .posts-page {
+      &.post-list nav .nav-links {
+        .page-numbers.next,
+        .page-numbers.prev {
+          display: none;
+        }
+      }
+      .entry-header {
+        .entry-title {
+          @include font-lh(36, 1.2);
+        }
+      }
+
+      #secondary.widget-area .sidebar-banner {
+        padding-left: 24px;
+        padding-right: 24px;
+      }
+
+      .related-posts {
+        margin-right: -10px;
+        margin-left: -10px;
+      }
+    }
+
+
+    .erorr-page__img img {
+      width: 360px;
+    }
+  }
+
+  @media only screen and ($phone-xs) {
+    .hero-block__img {
+      img {
+        width: 340px;
+      }
+    }
+    .hero-block-blog {
+      min-height: 301px;
+      &__img {
+       display: none;
+      }
+
+      .wrap-title {
+        margin-bottom: 0;
+      }
+    }
+    
+    .posts-page {
+      .entry-header {
+        .entry-title {
+          @include font-lh(28, 1.2);
+        }
+        .wp-post-image {
+          height: 180px;
+        }
+      }
+    }
+  }
+
+  .comment-form-comment textarea {
+    max-width: 509px;
+  }
+  .comment-form-author,
+  .comment-form-email {
+    max-width: 280px;
+  }
+
+  @media only screen and (max-width: 359px) {
+    .rating-site {
+      display: none;
+    }
+  }
+}

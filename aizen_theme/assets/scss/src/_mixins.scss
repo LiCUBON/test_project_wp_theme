@@ -1,0 +1,94 @@
+@mixin font-lh($fz, $lh) {
+  font-size: #{$fz}px;
+  line-height: #{round($fz * $lh)}px;
+}
+
+@mixin mainTitle($fz-text: 36, $lh: 1.2) {
+  @include font-lh($fz-text, $lh);
+  font-family: $font2, sans-serif;
+  font-weight: 700;
+}
+
+@mixin secondTitle($fz-text: 48, $lh: 1.42, $color: $c__text-main) {
+  @include font-lh($fz-text, $lh);
+  font-family: $font2, sans-serif;
+  font-weight: 700;
+}
+
+@mixin title($fz-def:22, $lh: 1.4) {
+  font-family: $font1, sans-serif;
+  font-weight: 700;
+  font-size: $fz-def;
+  line-height: $lh;
+  color: $color;
+}
+
+@mixin simpleText($fz-text: 18, $lh: 1.6) {
+  font-family: $font1, sans-serif;
+  @include font-lh($fz-text, $lh);
+  color: $c__text-main;
+}
+
+
+@mixin listSeo {
+  margin: 0 0 8px;
+  padding-left: 21px;
+  list-style: disc;
+  > li {
+    margin-bottom: 10px;
+    color: $c__text-title;
+    &:last-child {
+      margin-bottom: 0;
+    }
+    h1,.h1,h2,.h2,h3,.h3,h4,.h4,h5,.h5,h6,.h6 {
+      margin-bottom: 0;
+    }
+
+    &::marker {
+      font-size: 21px;
+      color: $color__additional;
+    }
+  }
+
+}
+@mixin listSeo_OL {
+  list-style: decimal;
+  margin: 0 0 8px;
+  list-style-position: inside;
+  ul {
+    padding-left: 30px;
+    li::marker {
+      content: '- ';
+      color: $c__text-main;
+      font-size: 20px;
+    }
+  }
+}
+
+// @mixin title700-def($fz-def:22, $lh: 1.4) {
+//   @include round-lh($fz-def, $lh);
+//   color: $c__text-main;
+//   @include font-primary_700;
+// }
+
+// @function str-insert($string, $insert, $index) {
+//   // Avoid making new strings if we don't need to.
+//   @if string.length($string) == 0 {
+//     @return $insert;
+//   }
+
+//   $before: string.slice($string, 0, $index);
+//   $after: string.slice($string, $index);
+//   @return $before + $insert + $after;
+// }
+
+// @mixin ref($lh, $fz) {
+//   $test: $lh * $fz;
+//   line-height: round($test);
+//   }
+
+// @mixin if_IE {
+//   @media all and (-ms-high-contrast: none), (-ms-high-contrast: active) {
+//     @content;
+//   }
+// }

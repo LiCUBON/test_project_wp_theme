@@ -1,0 +1,60 @@
+
+// ************************ FONTS: ************************
+$font1: Inter;
+$font2: Poppins;
+// ************************ COLOR: ************************
+
+
+// Primary
+
+$color__main: #2F39C1;
+$color__additional: #6B75F8;
+
+// Secondary
+
+$color__background: #F4F4FF;
+$color__stars: #F27E38;
+$color__verified: #32A752;
+
+//  Text Color
+
+$c__text-title: #191825;
+$c__text-main: #8C8C92;
+$c__text-second: #53525C;
+
+
+// shadows
+
+$color_btn_shadow: #CDD1FF;
+$color_form_shadow: #EDEDED;
+
+// additional color.
+
+$color__element: #8C8C92;
+$color__element2: #191825;
+$color__element3: #53525C;
+
+
+// Borders
+$color__border: #E8E8EA;
+$color__stroke: #8C8C92;
+
+// ************************ TEXT: ************************
+//$fz-desc: 16; // font-size Description for mixin <simpleText()>
+
+// ************************ MEDIA: ************************
+$desktop-full: 'max-width: 1920px';
+$desktop-xl: 'max-width: 1660px';
+$desktop-lg: 'max-width: 1512px';
+$desktop-md: 'max-width: 1366px';
+$laptop: 'max-width: 1199px';
+$tablet: 'max-width: 1053px';
+$tablet-sm: 'max-width: 991px';
+$phone-xl: 'max-width: 767px';
+$phone-lg: 'max-width: 679px';
+$phone-md: 'max-width: 560px';
+$phone-sm: 'max-width: 480px';
+$phone-xs: 'max-width: 374px';
+
+// ************************ Effects: ************************
+$transition: all 0.3s ease;

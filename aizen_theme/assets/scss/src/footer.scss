@@ -1,0 +1,162 @@
+.site-footer {
+
+   padding-top: 120px;
+
+   .footer__inner {
+      display: flex;
+      justify-content: space-between;
+      flex-wrap: wrap;
+   }
+
+   .footer__left {
+      max-width: 280px;
+      margin-bottom: 36px;
+   }
+
+   .footer__logo {
+      display: block;
+      margin-bottom: 12px;
+   }
+
+   .footer__txt {
+      margin-bottom: 32px;
+   }
+
+   // Components: pages.scss/info-contact
+
+   .footer__right {
+      display: flex;
+      flex-direction: column;
+      max-width: 380px;
+      width: 100%;
+   }
+
+   .footer__menu {
+      display: grid;
+      gap: 12px 20px;
+      grid-template-columns: repeat(auto-fill, 180px);
+      width: 100%;
+   }
+
+   .footer__service-menu {
+      cursor: pointer;
+      display: none;
+      align-items: center;
+      justify-content: center;
+      color: $c__text-title;
+
+      svg {
+         transition: $transition;
+      }
+
+      &.open {
+         svg {
+            transform: rotate(180deg);
+         }
+      }
+   }
+
+   .site-info {
+      margin-top: 48px;
+      background-color: $color__background;
+
+      &__inner {
+         display: flex;
+         flex-direction: column;
+         align-items: center;
+         padding: 48px 0px;
+      }
+
+      &__text p {
+         text-align: center;
+         font-family: $font2, sans-serif;
+         @include font-lh(14, 1.5);
+         margin: 0;
+      }
+
+
+      &__text,
+      .service-link {
+         margin-bottom: 24px;
+      }
+
+      .service-link {
+         display: flex;
+         flex-wrap: wrap;
+      }
+
+      a {
+         margin-right: 20px;
+
+         &:last-child {
+            margin-right: 0;
+         }
+      }
+
+      a,
+      .copy {
+         font-family: $font2, sans-serif;
+         @include font-lh(14, 1.5);
+      }
+
+      .copy {
+         display: flex;
+         justify-content: center;
+         width: 100%;
+      }
+   }
+
+   @media only screen and ($tablet) {
+      .footer__right {
+         margin-top: 24px;
+         max-width: none;
+      }
+
+      .footer__menu {
+         column-gap: 2.65px;
+      }
+
+      .site-info__text {
+         max-width: 620px;
+      }
+
+   }
+
+   @media only screen and ($phone-xl) {
+      
+      .footer__menu {
+         column-gap: 50px;
+      }
+   }
+
+   @media only screen and ($phone-lg) {
+      .site-info {
+         .service-link,
+         a {
+            margin-bottom: 12px;
+         }
+      }
+   }
+
+   @media only screen and ($phone-sm) {
+      .footer__menu {
+         display: none;
+         text-align: center;
+         justify-content: center;
+         margin-top: 8px;
+      }
+
+      .footer__service-menu {
+         display: flex;
+      }
+
+      .site-info {
+         .service-link {
+            justify-content: center;
+         }
+         .copy {
+            text-align: center;
+         }
+      }
+   }
+}
